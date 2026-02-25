@@ -52,7 +52,7 @@ export const Login = () => {
         try{
             if(toggleLoginSignup === 0){
                 if(email && password && email !== "" && password !== ""){
-                    const login = await axios.post("http://localhost:8080/api/v1/login", {
+                    const login = await axios.post("https://cognixchatbotbackend.onrender.com/api/v1/login", {
                         username: name,
                         Email: email,
                         password: password
@@ -70,7 +70,7 @@ export const Login = () => {
             } else if(toggleLoginSignup === 1){
                 if(email && password && email !== "" && password !== ""){
                     if(password === confirmPassword){
-                        const register = await axios.post("http://localhost:8080/api/v1/register", {
+                        const register = await axios.post("https://cognixchatbotbackend.onrender.com/api/v1/register", {
                             username: name,
                             Email: email,
                             password: password

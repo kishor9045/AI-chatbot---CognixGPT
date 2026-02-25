@@ -26,7 +26,7 @@ export const Sidebar = () => {
     const getAllThreads = async () => {
         try{
             if(!localStorage.getItem("token")) return;
-            const response = await axios.post("http://localhost:8080/api/v1/thread", {
+            const response = await axios.post("https://cognixchatbotbackend.onrender.com/api/v1/thread", {
                 token: localStorage.getItem("token")
             });
             if(response.status === 200){
@@ -47,7 +47,7 @@ export const Sidebar = () => {
             try{
                 if(!localStorage.getItem("token")) return;
 
-                const response = await axios.post(`http://localhost:8080/api/v1/thread/${threadId}`, {
+                const response = await axios.post(`https://cognixchatbotbackend.onrender.com/api/v1/thread/${threadId}`, {
                     token: localStorage.getItem("token")
                 });
                 if(response.status === 200){
@@ -63,7 +63,7 @@ export const Sidebar = () => {
         try{
             if(!localStorage.getItem("token")) return;
             const token = localStorage.getItem("token");
-            const response = await axios.delete(`http://localhost:8080/api/v1/thread/${threadId}?token=${token}`);
+            const response = await axios.delete(`https://cognixchatbotbackend.onrender.com/api/v1/thread/${threadId}?token=${token}`);
             handleSuccess(response.data.message);
             setCurrThreadId(uuidv4());
             setPrevChats([]);

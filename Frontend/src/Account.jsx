@@ -16,7 +16,7 @@ export const Account = () => {
 
     const getAccountDetails = async () => {
         try{
-            const response = await axios.get(`http://localhost:8080/api/v1/account?token=${localStorage.getItem("token")}`);
+            const response = await axios.get(`https://cognixchatbotbackend.onrender.com/api/v1/account?token=${localStorage.getItem("token")}`);
             setAccountDetails({...accountDetails, 
                 User: response.data.username,
                 Email: response.data.email,

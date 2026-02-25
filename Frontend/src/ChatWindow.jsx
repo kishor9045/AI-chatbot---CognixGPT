@@ -25,7 +25,7 @@ export const ChatWindow = () => {
             setModelLimit(false);
             if(currThreadId && prompt && model && currThreadId !== "" && prompt !== "" && model !== ""){
                 setLoading(true);
-                const response = await axios.post("http://localhost:8080/api/v1/chat", {
+                const response = await axios.post("https://cognixchatbotbackend.onrender.com/api/v1/chat", {
                     threadId: currThreadId,
                     sendRequest: prompt,
                     model: model,
