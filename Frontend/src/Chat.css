@@ -46,7 +46,7 @@
     border-radius: 5px;
 }
 
-@media (max-aspect-ratio: 6/10){
+@media (max-aspect-ratio: 6/8){
     .chats{
         max-width: 360px;
     }
