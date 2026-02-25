@@ -45,3 +45,13 @@
     background-color: #686868;
     border-radius: 5px;
 }
+
+@media (max-aspect-ratio: 6/10){
+    .chats{
+        max-width: 360px;
+    }
+    .chats h1{
+        font-size: 1.5rem;
+        height: 100px !important;
+    }
+}

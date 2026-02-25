@@ -13,7 +13,7 @@ function App() {
   const [prevChats, setPrevChats] = useState([]);
   const [allThreads, setAllThreads] = useState([]);
   const [modelLimit, setModelLimit] = useState(false);
-  const [toggleSidebar, setToggleSidebar] = useState(true);
+  const [toggleSidebar, setToggleSidebar] = useState(false);
 
   const providerValues = {
       prompt, setPrompt,

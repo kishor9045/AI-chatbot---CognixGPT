@@ -201,3 +201,15 @@
     font-size: 12px;
     color: #b4b4b4;
 }
+
+@media (max-aspect-ratio: 6/10){
+    .userIconDiv{
+        margin-inline: 0;
+    }
+    .inputBox{
+        max-width: 360px;
+    }
+    .chatInput .info p{
+        font-size: 10px;
+    }
+}
